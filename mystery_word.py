@@ -6,21 +6,22 @@ import random
 random_choice = []
 
 def easy_level():
-    with open('words.txt') as student_file:
-        for student in student_file.readlines():
-            if len(student) > 4 and len(student) < 7:
-                random_choice.append(student.strip())
+    with open('words.txt') as stuff_file:
+        for stuff in stuff_file.readlines():
+            if len(stuff) > 4 and len(stuff) < 7:
+                random_choice.append(stuff.strip())
 
 def medium_level():
-    with open('words.txt') as student_file:
-        for student in student_file.readlines():
-            if len(student) > 6 and len(student) < 8:
-                random_choice.append(student.strip())
+    with open('words.txt') as stuff_file:
+        for stuff in stuff_file.readlines():
+            if len(stuff) > 6 and len(stuff) < 8:
+                random_choice.append(stuff.strip())
+
 def hard_level():
-    with open('words.txt') as student_file:
-        for student in student_file.readlines():
-            if len(student) > 8:
-                random_choice.append(student.strip())
+    with open('words.txt') as stuff_file:
+        for stuff in stuff_file.readlines():
+            if len(stuff) > 8:
+                random_choice.append(stuff.strip())
 
 def lowercase_things(basket):
     input = basket.lower()
@@ -38,7 +39,6 @@ def choose_difficulty():
     else:
         print("That is not a valid choice! Please choose Easy, Medium, or Hard. ")
         choose_difficulty()
-    game_board()
 
 choose_difficulty()
 random_word = random.choice(random_choice)
@@ -123,5 +123,5 @@ def play_again():
         print("Sorry, I didn't understand that!")
         play_again()
 
-# game_board()
+game_board()
 play_again()
