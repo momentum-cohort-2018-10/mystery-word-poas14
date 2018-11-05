@@ -42,7 +42,7 @@ def choose_difficulty():
 
 choose_difficulty()
 random_word = random.choice(random_choice)
-print(random_word)
+# print(random_word)
 
 
 """This Function shows an updated game board every time the user guesses"""
